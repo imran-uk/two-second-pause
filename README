@@ -1,0 +1,39 @@
+A perl script to aid minidisc-to-mp3 recording. 
+It inserts a 2 second pause in between each song in a playlist thus enabling a 
+minidisc to place an automatic trackmark.
+
+Usage instructions: perldoc two-second-pause.pl
+
+I do not use a MiniDisc anymore so this program is now unmaintained. I
+originally wanted to write RhythmBox plugin but found the documentation very
+unfriendly and lacking. A plugin would be the best solution, see NOTES below.
+
+NOTES
+
+If someone wants to start writing a RhythmBox plugin then here are some rough notes to get
+you started. The notes are from the point of view of a recent Ubuntu LTS release.
+
+I have included a dir in this repo called "plugin" containing how far I got in
+writing the plugin (which isn't very far!).
+
+See: http://live.gnome.org/RhythmboxPlugins/WritingGuide
+
+and
+
+/usr/share/doc/rhythmbox/development-reference
+In a browser:
+file:///usr/share/doc/rhythmbox/development-reference/index.html
+
+For debugging, run RhythmBox like this:
+
+rhythmbox -D two-second-pause
+
+also
+
+python -d <file> to run it through the parser
+
+Mailing list response to a question about writing the plugin:
+Rhythmbox emits signals when certain events occur, such as starting a track,
+etc. You can have a function that gets called when the signal for finishing a
+song is emitted (if there is one) which does what you want. I don't know the
+specifics, but check the GTK and pyGTK documentation for more details.

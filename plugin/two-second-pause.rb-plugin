@@ -1,0 +1,9 @@
+[RB Plugin]
+Loader=python
+Module=two-second-pause
+IAge=1
+Name=Two Second Pause
+Description=To aid minidisc-to-mp3 recording, inserts a 2 second pause in between each song in a playlist thus enabling a minidisc to place an automatic trackmark.
+Authors=Imran Chaudhry <ichaudhry@gmail.com>
+Copyright=Copyright © 2009 Imran Chaudhry
+Website=http://imranchaudhry.com
